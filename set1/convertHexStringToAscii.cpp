@@ -55,7 +55,7 @@ char convertResultIntToResultChar(int resultInt)
   if(resultInt >= 32 && resultInt <= 126)
     resultChar = (char)resultInt;
   else
-    resultChar = '!';
+    resultChar = '`';
 
   return resultChar;
 }

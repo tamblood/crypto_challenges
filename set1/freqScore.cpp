@@ -96,10 +96,19 @@ int getFreqScore(char *testText)
       case '0': freqScore += 50;
                 break;
       case '!':
+      case '.':
+      case ':':
+      case ';':
+      case '<':
+      case '>':
+      case '=':
+      case '?':
+      case '@':
       case '{':
       case '}':
       case ']':
       case '[':
+      case '\\':
       case '^':
       case '|':
       case '~':
@@ -107,8 +116,18 @@ int getFreqScore(char *testText)
       case '+':
       case '-':
       case '#':
+      case '&':
+      case '\'':
+      case '/':
+      case '(':
+      case ')':
+      case ',':
+      case '$':
       case '*':
-      case '_': freqScore += 1000;
+      case '\"':
+      case '_': freqScore += 100;
+                break;
+      case '`': freqScore += 100;
                 break;
 
     } 
